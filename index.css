@@ -1,0 +1,158 @@
+@font-face {
+    font-family:"Work Sans" ;
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+    font-weight: 400 600 700;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family:"WorkSans-Italic" ;
+    src: url(assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+} */
+
+/* Global */
+:root {
+    --color-white: hsl(0, 0%,  100%);
+    --color-light-pink: hsl(275, 100%, 97%);
+    --color-grayish-purple: hsl(292, 16%, 49%);
+    --color-dark-purple: hsl(292, 42%, 14%);
+  
+    --font-face-default: "Work Sans", sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    --font-size-body: 0.5rem;
+    --font-size-heading: 2rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    background-color: var(--color-light-pink);
+    color: var(--color-grayish-purple);
+    font-family: var(--font-face-default);
+    font-weight: var(--font-weight-regular);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    display: block;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Utility Classes */
+
+/* Styles */
+main{
+    background-color: var(--color-white);
+    margin:1.5rem ;
+    padding:1.5rem ;
+    border-radius: 1rem;
+    position: relative;
+    top:-7rem;
+}
+
+.banner{
+    width: 100%;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    min-height: 300px;
+} 
+
+h1{
+    color: var(--color-dark-purple);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+   
+}
+
+h2{
+    color: var(--color-dark-purple);
+    font-size:var(--font-face-default);
+    font-weight: var(--font-weight-semi-bold);
+    margin: 1rem 2rem 1rem 0;
+    /* border: 1px solid red; */
+
+}
+
+p{
+ color: var(--color-grayish-purple);
+}
+
+section:not(:last-child){
+    border-bottom: 1px solid var(--color-light-pink);
+    padding-bottom: 1rem;
+} 
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.head-title{
+    display: flex;
+    justify-content:flex-start ;
+}
+
+.icon-star{
+    width:1.5rem;
+    text-align: start;
+    margin-right:2rem;
+
+}
+
+.icon-plus{
+    width: 1.8rem;
+}
+
+.icon-minus{
+    width: 1.8rem;
+    display:none;
+}
+/* Responsive */
+
+@media screen and(min-width: 400px){
+.banner{
+    width:100%;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+}
