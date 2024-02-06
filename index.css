@@ -116,7 +116,8 @@ h2{
     font-size:var(--font-face-default);
     font-weight: var(--font-weight-semi-bold);
     width: 85%;
-    cursor:pointer
+    cursor:pointer;
+    user-select: none;
 }
 h2:hover{
     color: #ad28eb;
@@ -130,7 +131,6 @@ section:not(:last-child){
 .question{
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border: 1px solid yellow;
 }
 
 
@@ -139,7 +139,7 @@ section:not(:last-child){
     justify-content: space-between;
 }
 
-.icon-btn{
+.icon-btn-plus{
     background-image: url(assets/images/icon-plus.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -148,6 +148,21 @@ section:not(:last-child){
     cursor: pointer;
     border: 1px solid red;
    
+}
+
+.icon-btn-minus{
+    background-image: url(assets/images/icon-minus.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border: 1px solid red;
+   
+}
+
+.hidden{
+    display: none;
 }
 
 /* Responsive */
