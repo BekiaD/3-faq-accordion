@@ -1,5 +1,5 @@
 @font-face {
-    font-family:"Work Sans" ;
+    font-family: "Work Sans";
     src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
     font-weight: 400 600 700;
     font-display: swap;
@@ -12,11 +12,11 @@
 
 /* Global */
 :root {
-    --color-white: hsl(0, 0%,  100%);
+    --color-white: hsl(0, 0%, 100%);
     --color-light-pink: hsl(275, 100%, 97%);
     --color-grayish-purple: hsl(292, 16%, 49%);
     --color-dark-purple: hsl(292, 42%, 14%);
-  
+
     --font-face-default: "Work Sans", sans-serif;
     --font-weight-regular: 400;
     --font-weight-semi-bold: 600;
@@ -79,102 +79,140 @@ h6 {
 /* Utility Classes */
 
 /* Styles */
-main{
+main {
     background-color: var(--color-white);
-    margin:1.5rem ;
-    padding:1.5rem ;
+    margin: 1.5rem;
+    padding: 1.5rem;
     border-radius: .6rem;
     position: relative;
-    top:-7rem;
+    top: -7rem;
 }
 
-.banner{
+.banner {
     width: 100%;
     background-image: url(assets/images/background-pattern-mobile.svg);
     min-height: 250px;
-} 
+}
 
-h1{
+h1 {
     color: var(--color-dark-purple);
     font-size: var(--font-size-heading);
     font-weight: var(--font-weight-bold);
 }
 
-.icon-star{
-    width:1.5rem;
+.icon-star {
+    width: 1.5rem;
     text-align: start;
-    margin-right:2rem;
+    margin-right: 2rem;
 }
 
-.head-title{
+.head-title {
     display: flex;
-    justify-content:flex-start ;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
 }
 
-h2{
+h2 {
     color: var(--color-dark-purple);
-    font-size:var(--font-face-default);
+    font-size: var(--font-face-default);
     font-weight: var(--font-weight-semi-bold);
     width: 85%;
-    cursor:pointer;
+    cursor: pointer;
     user-select: none;
 }
-h2:hover{
+
+h2:hover {
     color: #ad28eb;
 }
 
 
 
-section:not(:last-child){
+section:not(:first-child):not(:last-child) {
     border-bottom: 1px solid var(--color-light-pink);
-} 
-.question{
+}
+
+.question:not(:last-child) {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
 
-.title{
+.title {
     display: flex;
     justify-content: space-between;
 }
 
-.icon-btn-plus{
+.icon-btn-plus {
     background-image: url(assets/images/icon-plus.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 35px;
     height: 35px;
     cursor: pointer;
-    border: 1px solid red;
-   
+
 }
 
-.icon-btn-minus{
+.icon-btn-minus {
     background-image: url(assets/images/icon-minus.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 35px;
     height: 35px;
     cursor: pointer;
-    border: 1px solid red;
+
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   /* wishing I had animation */
    
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-/* Responsive */
-/* 
- @media screen and(min-width: 400px){
-   
-.banner{
-    width:100%;
-    background-image: url(assets/images/background-pattern-desktop.svg);
-    background-position: center;
-    background-clip: content-box;
-    background-repeat: no-repeat;
+.vanish{
+    /* if i had animation it would be here */
 }
 
-}  */
+/* Responsive */
+
+@media screen and (min-width: 375px) {
+
+    main {
+        margin: 0 auto;
+        width: 600px;
+        top: -8.5rem;
+    }
+
+    .banner {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    .icon-star {
+        width: 2.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .head-title {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size:1.1rem;
+        width: 85%;
+    }
+    
+    .question:not(:last-child) {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
